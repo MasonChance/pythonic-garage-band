@@ -1,12 +1,14 @@
 
 
 class Band:
-    lineup = []
+    
+    instances = []
 
     def __init__(self, name, members=[]):
         self.name = name
         self.members = members
-        lineup.append(self.name)
+        Band.instances.append(self.name)
+        
 
     def __str__(self):
         return f"The band {self.name}"
@@ -26,7 +28,7 @@ class Band:
 
     @classmethod
     def to_list(cls):
-        return cls.lineup
+        return cls.instances
         
 
 # TODO: Clarify- is `.instances` a reserved attr. of the python class object??? 
